@@ -1,0 +1,48 @@
+ALGORITHM distinctElement
+
+VAR 
+ SUM : INTEGER := 0;
+ OBJ1: HASH_TABLE<INTEGER,BOOLEAN>;
+ OBJ2: HASH_TABLE<INTEGER,BOOLEAN>;
+ TWICE: HASH_TABLE<INTEGER,BOOLEAN>;
+ 
+
+BEGIN
+
+   HASH_TABLE<INTEGER,BOOLEAN>;
+
+   OBJ1.insert(3,"true");
+   OBJ1.insert(1,"true");
+   OBJ1.insert(7,"true");
+   OBJ1.insert(9,"true");
+
+   
+   OBJ2: HASH_TABLE<INTEGER,BOOLEAN>;
+
+   OBJ1.insert(2,"true");
+   OBJ1.insert(4,"true");
+   OBJ1.insert(1,"true");
+   OBJ1.insert(9,"true");
+   OBJ1.insert(3,"true");
+
+
+
+FOR KEY IN OBJ1:
+
+IF (OBJ2[KEY]) THEN
+
+TWICE[KEY] = TRUE
+
+END IF 
+
+END FOR 
+
+
+
+FOR KEY IN TWICE:
+   SUM = SUM + KEY
+END_FOR
+   Write(SUM)
+
+
+END

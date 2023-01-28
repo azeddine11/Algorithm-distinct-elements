@@ -1,0 +1,33 @@
+ALGORITHM distinctElement
+
+VAR 
+ SUM : INTEGER := 0;
+ ARR1: ARRAY_OF INTEGER[5];
+ ARR2: ARRAY_OF INTEGER[5];
+ ARR3:ARRAY_OF INTEGER[0];
+ TWO_ARRAYS: ^ARRAY_OF INTEGER[] := arr1 + arr2;
+
+ i : INTEGER;
+
+BEGIN
+
+
+
+FOR i FROM 0 TO TWO_ARRAYS.length STEP step  DO 
+    
+    IF (<>ARR3.INCLUDES(TWO_ARRAYS[i])) THEN
+ 
+        ARR3.PUSH(two_arr[i]);
+
+    END IF
+
+END_FOR
+
+
+FOR i FROM 0 TO TWO_ARRAYS.length STEP step  DO 
+
+   SUM = SUM + ARR3[i] 
+END_FOR
+
+   Write(SUM)
+END
