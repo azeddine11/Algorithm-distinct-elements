@@ -9,7 +9,7 @@ VAR
 
 BEGIN
 
-   HASH_TABLE<INTEGER,BOOLEAN>;
+   OBJ1:HASH_TABLE<INTEGER,BOOLEAN>;
 
    OBJ1.insert(3,"true");
    OBJ1.insert(1,"true");
@@ -19,11 +19,11 @@ BEGIN
    
    OBJ2: HASH_TABLE<INTEGER,BOOLEAN>;
 
-   OBJ1.insert(2,"true");
-   OBJ1.insert(4,"true");
-   OBJ1.insert(1,"true");
-   OBJ1.insert(9,"true");
-   OBJ1.insert(3,"true");
+   OBJ2.insert(2,"true");
+   OBJ2.insert(4,"true");
+   OBJ2.insert(1,"true");
+   OBJ2.insert(9,"true");
+   OBJ2.insert(3,"true");
 
 
 

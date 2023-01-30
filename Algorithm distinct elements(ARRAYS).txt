@@ -4,30 +4,43 @@ VAR
  SUM : INTEGER := 0;
  ARR1: ARRAY_OF INTEGER[5];
  ARR2: ARRAY_OF INTEGER[5];
- ARR3:ARRAY_OF INTEGER[0];
+ ARR3:ARRAY_OF INTEGER[];
  TWO_ARRAYS: ^ARRAY_OF INTEGER[] := arr1 + arr2;
 
- i : INTEGER;
+ i,j : INTEGER;
 
 BEGIN
 
+FOR i FROM 0 TO ARR1.length STEP step  DO 
 
-
-FOR i FROM 0 TO TWO_ARRAYS.length STEP step  DO 
-    
-    IF (<>ARR3.INCLUDES(TWO_ARRAYS[i])) THEN
+  FOR j FROM 0 TO ARR2.length STEP step  DO 
+      
+      IF (ARR1[i] == ARR2[J]) THEN
  
-        ARR3.PUSH(two_arr[i]);
+        ARR3.PUSH(ARR1[i]);
 
     END IF
 
+  END_FOR
+
 END_FOR
 
 
-FOR i FROM 0 TO TWO_ARRAYS.length STEP step  DO 
 
-   SUM = SUM + ARR3[i] 
+FOR i FROM 0 TO  TWO_ARRAYS.length STEP step  DO 
+
+  FOR j FROM 0 TO ARR3.length STEP step  DO 
+      
+      IF (TWO_ARRAYS[i] == ARR3[J]) THEN
+ 
+        TWO_ARRAYS[I] = 0
+
+    END IF
+
+  END_FOR
+
+  Sum += TWO_ARRAYS[i]
+
 END_FOR
-
    Write(SUM)
 END
